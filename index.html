@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elliot Wave Bot Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="pulse"></span>
+                <h1>ELLIOT WAVE<span>BOT</span></h1>
+            </div>
+            <div id="status-badge" class="badge">INITIALIZING</div>
+        </header>
+
+        <main>
+            <!-- Stats Row -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <label>Account Balance</label>
+                    <div class="value" id="balance">$0.00</div>
+                    <div class="sub-value" id="initial-balance">Initial: $0.00</div>
+                </div>
+                <div class="stat-card">
+                    <label>Total PnL</label>
+                    <div class="value" id="total-pnl">$0.00</div>
+                    <div class="sub-value" id="pnl-pct">0.00%</div>
+                </div>
+                <div class="stat-card">
+                    <label>Win / Loss</label>
+                    <div class="value" id="win-loss">0 / 0</div>
+                    <div class="sub-value" id="win-rate">Win Rate: 0%</div>
+                </div>
+            </section>
+
+            <!-- Middle Section -->
+            <div class="middle-grid">
+                <!-- Market Scan -->
+                <section class="panel market-panel">
+                    <h3>Market Analysis</h3>
+                    <div class="setup-grid">
+                        <div class="setup-item">
+                            <label>Symbol</label>
+                            <span id="display-symbol">BTC/USDT</span>
+                        </div>
+                        <div class="setup-item">
+                            <label>Macro Bias</label>
+                            <span id="macro-bias" class="bias-neutral">NEUTRAL</span>
+                        </div>
+                        <div class="setup-item">
+                            <label>Impulse</label>
+                            <span id="setup-direction">NONE</span>
+                        </div>
+                        <div class="setup-item">
+                            <label>Wave Count</label>
+                            <span id="wave-count">0</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Active Trade -->
+                <section class="panel trade-panel" id="active-trade-panel">
+                    <h3>Active Position</h3>
+                    <div id="no-trade" class="empty-state">No active trade detected</div>
+                    <div id="trade-content" class="hidden">
+                        <div class="trade-header">
+                            <span id="pos-direction" class="direction-badge">LONG</span>
+                            <span id="pos-qty">0.000 BTC</span>
+                        </div>
+                        <div class="price-grid">
+                            <div class="price-item">
+                                <label>Entry</label>
+                                <span id="pos-entry">$0.00</span>
+                            </div>
+                            <div class="price-item">
+                                <label>Target (38.2%)</label>
+                                <span id="pos-tp">$0.00</span>
+                            </div>
+                            <div class="price-item">
+                                <label>Stop Loss</label>
+                                <span id="pos-sl">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="last-update">Last Updated: <span id="last-update">--</span></div>
+            <div class="exchange-info" id="exchange-info">TRADING BOT (ELLIOT WAVE METHOD)</div>
+        </footer>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

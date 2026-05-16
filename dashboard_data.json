@@ -1,0 +1,21 @@
+{
+    "symbol": "BTC/USDT:USDT",
+    "exchange": "binance",
+    "testnet": true,
+    "stats": {
+        "initial_balance": 0.0,
+        "current_balance": 0.0,
+        "total_pnl": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "trades": [],
+        "current_setup": {
+            "wave_count": 0,
+            "macro_bias": "NEUTRAL",
+            "direction": null,
+            "status": "Scanning..."
+        }
+    },
+    "active_position": null,
+    "last_update": "2026-04-22 11:12:29"
+}
